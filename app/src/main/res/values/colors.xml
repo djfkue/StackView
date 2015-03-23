@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- The default recents task bar background color. -->
+    <color name="recents_task_bar_default_background_color">#ffe6e6e6</color>
+    <!-- The recents task bar light text color to be drawn on top of dark backgrounds. -->
+    <color name="recents_task_bar_light_text_color">#ffeeeeee</color>
+    <!-- The recents task bar dark text color to be drawn on top of light backgrounds. -->
+    <color name="recents_task_bar_dark_text_color">#cc000000</color>
+    <!-- The recents task bar light dismiss icon color to be drawn on top of dark backgrounds. -->
+    <color name="recents_task_bar_light_dismiss_color">#ffeeeeee</color>
+    <!-- The recents task bar dark dismiss icon color to be drawn on top of light backgrounds. -->
+    <color name="recents_task_bar_dark_dismiss_color">#99000000</color>
+    <!-- The recents task bar highlight color. -->
+    <color name="recents_task_bar_highlight_color">#28ffffff</color>
+    <!-- The lock to task button background color. -->
+    <color name="recents_task_view_lock_to_app_button_background_color">#ffe6e6e6</color>
+    <!-- The lock to task button foreground color. -->
+    <color name="recents_task_view_lock_to_app_button_color">#ff666666</color>
+
+    <!-- Shadow color for the first pixels around the fake shadow for recents. -->
+    <color name="fake_shadow_start_color">#44000000</color>
+
+    <!-- Shadow color for the furthest pixels around the fake shadow for recents. -->
+    <color name="fake_shadow_end_color">#03000000</color>
+</resources>
