@@ -41,7 +41,7 @@ public class TaskView extends FrameLayout {
     boolean mIsFullScreenView;
     boolean mClipViewInStack;
 
-    AnimateableViewBounds mViewBounds;
+    //AnimateableViewBounds mViewBounds;
 
     Paint mLayerPaint = new Paint();
 
@@ -72,7 +72,7 @@ public class TaskView extends FrameLayout {
         mConfig = RecentsConfiguration.getInstance();
         mMaxDimScale = mConfig.taskStackMaxDim / 255f;
         mClipViewInStack = true;
-        mViewBounds = new AnimateableViewBounds(this, mConfig.taskViewRoundedCornerRadiusPx);
+        //mViewBounds = new AnimateableViewBounds(this, mConfig.taskViewRoundedCornerRadiusPx);
         setTaskProgress(getTaskProgress());
         setDim(getDim());
         if (mConfig.fakeShadows) {
@@ -127,14 +127,14 @@ public class TaskView extends FrameLayout {
     }
 
     /** Returns the view bounds. */
-    AnimateableViewBounds getViewBounds() {
-        return mViewBounds;
-    }
+//    AnimateableViewBounds getViewBounds() {
+//        return mViewBounds;
+//    }
 
     /** Sets the current task progress. */
     public void setTaskProgress(float p) {
         mTaskProgress = p;
-        mViewBounds.setAlpha(p);
+        //mViewBounds.setAlpha(p);
         updateDimFromTaskProgress();
     }
 
@@ -212,7 +212,7 @@ public class TaskView extends FrameLayout {
         mHeaderView.setIsFullscreen(isFullscreen);
         if (isFullscreen) {
             // If we are full screen, then disable the bottom outline clip for the footer
-            mViewBounds.setOutlineClipBottom(0);
+            //mViewBounds.setOutlineClipBottom(0);
         }
     }
 
@@ -270,20 +270,20 @@ public class TaskView extends FrameLayout {
                         (scaledWindowInsetTop + scaledYOffset);
 
                 // Animate the top clip
-                mViewBounds.animateClipTop(windowInsetTop, duration,
-                        new ValueAnimator.AnimatorUpdateListener() {
-                            @Override
-                            public void onAnimationUpdate(ValueAnimator animation) {
-                                int y = (Integer) animation.getAnimatedValue();
-                                mHeaderView.setTranslationY(y);
-                            }
-                        });
+//                mViewBounds.animateClipTop(windowInsetTop, duration,
+//                        new ValueAnimator.AnimatorUpdateListener() {
+//                            @Override
+//                            public void onAnimationUpdate(ValueAnimator animation) {
+//                                int y = (Integer) animation.getAnimatedValue();
+//                                mHeaderView.setTranslationY(y);
+//                            }
+//                        });
                 // Animate the bottom or right clip
                 int size = Math.round((taskRect.width() / taskScale));
                 if (mConfig.hasHorizontalLayout()) {
-                    mViewBounds.animateClipRight(getMeasuredWidth() - size, duration);
+                    //mViewBounds.animateClipRight(getMeasuredWidth() - size, duration);
                 } else {
-                    mViewBounds.animateClipBottom(getMeasuredHeight() - (windowInsetTop + size), duration);
+                    //mViewBounds.animateClipBottom(getMeasuredHeight() - (windowInsetTop + size), duration);
                 }
                 // Animate the task bar of the first task view
                 animate()
@@ -298,9 +298,9 @@ public class TaskView extends FrameLayout {
                                 requestLayout();
 
                                 // Reset the clip
-                                mViewBounds.setClipTop(0);
-                                mViewBounds.setClipBottom(0);
-                                mViewBounds.setClipRight(0);
+//                                mViewBounds.setClipTop(0);
+//                                mViewBounds.setClipBottom(0);
+//                                mViewBounds.setClipRight(0);
                                 // Reset the bar translation
                                 mHeaderView.setTranslationY(0);
 

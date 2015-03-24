@@ -134,13 +134,13 @@ public class RecentsConfiguration {
 
         // Interpolators
         fastOutSlowInInterpolator = AnimationUtils.loadInterpolator(context,
-                android.R.interpolator.fast_out_slow_in);
+                android.R.interpolator.accelerate_decelerate);
         fastOutLinearInInterpolator = AnimationUtils.loadInterpolator(context,
-                android.R.interpolator.fast_out_linear_in);
+                android.R.interpolator.accelerate_decelerate);
         linearOutSlowInInterpolator = AnimationUtils.loadInterpolator(context,
-                android.R.interpolator.linear_out_slow_in);
+                android.R.interpolator.accelerate_decelerate);
         quintOutInterpolator = AnimationUtils.loadInterpolator(context,
-                android.R.interpolator.decelerate_quint);
+                android.R.interpolator.accelerate_decelerate);
     }
 
     /** Updates the configuration to the current context */

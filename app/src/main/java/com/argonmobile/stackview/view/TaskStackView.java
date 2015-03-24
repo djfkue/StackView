@@ -341,12 +341,12 @@ public class TaskStackView extends FrameLayout implements ViewPool.ViewPoolConsu
                                 - nextTv.getPaddingTop() - 1);
                     }
                 }
-                tv.getViewBounds().setClipBottom(clipBottom);
+                //tv.getViewBounds().setClipBottom(clipBottom);
             }
             if (getChildCount() > 0) {
                 // The front most task should never be clipped
                 TaskView tv = (TaskView) getChildAt(getChildCount() - 1);
-                tv.getViewBounds().setClipBottom(0);
+                //tv.getViewBounds().setClipBottom(0);
             }
         }
         mStackViewsClipDirty = false;

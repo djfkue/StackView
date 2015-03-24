@@ -99,11 +99,11 @@ public class TaskViewHeader extends FrameLayout {
         mActivityDescription = (TextView) findViewById(R.id.activity_description);
 
         // Hide the backgrounds if they are ripple drawables
-        if (!Constants.DebugFlags.App.EnableTaskFiltering) {
-            if (mApplicationIcon.getBackground() instanceof RippleDrawable) {
-                mApplicationIcon.setBackground(null);
-            }
-        }
+//        if (!Constants.DebugFlags.App.EnableTaskFiltering) {
+//            if (mApplicationIcon.getBackground() instanceof RippleDrawable) {
+//                mApplicationIcon.setBackground(null);
+//            }
+//        }
     }
 
     @Override

@@ -58,11 +58,7 @@ public class TaskViewThumbnail extends View {
     }
 
     public TaskViewThumbnail(Context context, AttributeSet attrs, int defStyleAttr) {
-        this(context, attrs, defStyleAttr, 0);
-    }
-
-    public TaskViewThumbnail(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
+        super(context, attrs, defStyleAttr);
         mConfig = RecentsConfiguration.getInstance();
         mCornerRadius = mConfig.taskViewRoundedCornerRadiusPx;
         mDrawPaint.setColorFilter(mLightingColorFilter);
@@ -75,12 +71,10 @@ public class TaskViewThumbnail extends View {
         if (mInvisible) {
             return;
         }
-        canvas.drawRoundRect(0,
+        canvas.drawRect(0,
                 0,
                 getWidth(),
                 getHeight(),
-                mCornerRadius,
-                mCornerRadius,
                 mDrawPaint);
     }
 
